@@ -1,0 +1,4 @@
+If you access this file through a PHP-enabled webserver (like Apache),
+it will display a QR-code to initialize an RFC6238 time-based one-time password
+(as used by Google Authenticator). You can enter test values, hit "Check", and
+verify that the program logic works.
