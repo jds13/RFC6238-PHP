@@ -84,7 +84,7 @@ if(isset($_REQUEST['totp'])) {
 <script>
    function CheckAuth() {
       var telem = document.getElementById('authin').value;
-      $.get('totp_auth.php',
+      $.get('RFC6238.php',
          { totp: telem },
          function(data) { msg.innerHTML = data; },
          "html");
