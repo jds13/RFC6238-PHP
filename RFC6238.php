@@ -80,6 +80,10 @@ if(isset($_REQUEST['totp'])) {
 ?>
 
 <html><head><title>TOTP PHP demo</title>
+<style>
+   * { font-family: sans-serif; }
+   .k { font-family: monospace;  }
+   </style>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script>
    function CheckAuth() {
@@ -93,10 +97,13 @@ if(isset($_REQUEST['totp'])) {
 </head>
 <body>
 <p>
+<p> &nbsp;
+<p> &nbsp;
 <?php
-echo ' <p> &nbsp; <p> &nbsp;  <img src="http://www.google.com/chart?chs=200x200&chld=M|0&cht=qr&chl=otpauth://totp/yournamehere?secret='.$UserSecretKey.'">';
+echo '<img src="https://www.google.com/chart?chs=200x200&chld=M|0&cht=qr&chl=otpauth://totp/yournamehere?secret='.$UserSecretKey.'" alt="fail">';
+echo '<p> &nbsp; &nbsp; <span class="k">'.$UserSecretKey.'</span>';
 ?>
-<p> <p>Use the QR code above to set up your authenticator.</a>
+<p> <p>Use the QR code or secret key above to set up your authenticator.</a>
 <p><label for="authin">Then check an authentication code: </label><input type="text" length=6 id="authin">
  &nbsp; <input type='button' value="Check" onclick='CheckAuth()'>
  <p> &nbsp; <p>
